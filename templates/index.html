@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>博客系统</title>
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 认证部分：包含登录和注册表单 -->
+        <div id="auth-section">
+            <!-- 登录表单 -->
+            <div id="login-form" class="auth-form">
+                <h2>登录</h2>
+                <input type="text" id="login-username" placeholder="用户名">
+                <input type="password" id="login-password" placeholder="密码">
+                <button onclick="login()">登录</button>
+            </div>
+            
+            <!-- 注册表单 -->
+            <div id="register-form" class="auth-form">
+                <h2>注册</h2>
+                <input type="text" id="register-username" placeholder="用户名">
+                <input type="password" id="register-password" placeholder="密码">
+                <button onclick="register()">注册</button>
+            </div>
+        </div>
+
+        <!-- 发布文章部分（默认隐藏，登录后显示） -->
+        <div id="post-section" style="display: none;">
+            <h2>发布新文章</h2>
+            <input type="text" id="post-title" placeholder="标题">
+            <textarea id="post-content" placeholder="内容"></textarea>
+            <button onclick="createPost()">发布</button>
+        </div>
+
+        <!-- 文章列表容器 -->
+        <div id="posts-list">
+            <!-- 文章将通过JavaScript动态加载 -->
+        </div>
+    </div>
+    <!-- 引入JavaScript脚本 -->
+    <script src="/static/script.js"></script>
+</body>
+</html> 
